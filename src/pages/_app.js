@@ -3,11 +3,11 @@ import { ChakraProvider, Box } from "@chakra-ui/react";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ChakraProvider>
-      <Box maxW={"30em"}>
+    <Box maxW={"30em"}>
+      <ChakraProvider>
         <Component {...pageProps} />
-      </Box>
-    </ChakraProvider>
+      </ChakraProvider>
+    </Box>
   );
 }
 

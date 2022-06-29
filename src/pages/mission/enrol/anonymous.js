@@ -1,34 +1,21 @@
 import React from "react";
-import { Flex, VStack, Center } from "@chakra-ui/react";
-import ClearIcon from "@mui/icons-material/Clear";
-import { useRouter } from "next/router";
+import { Flex, VStack, Center, Text, Button } from "@chakra-ui/react";
 import Award from "../../../components/mission/Award";
+import TitleX from "../../../components/TitleX";
 
 const anonymous = () => {
-  const router = useRouter();
   return (
-    <VStack>
-      <Flex
-        w="full"
-        color="white"
-        py="20px"
-        bg="#2B6CB0"
-        fontSize={"20px"}
-        fontWeight="bold"
-        alignItems={"center"}
-        justifyContent={"center"}
-      >
-        登錄發票
+    <Flex className="flex-col">
+      <TitleX text="登錄發票" />
+      <Flex className="bg-[#FFCE33] h-[56px] w-full items-center px-[32px] justify-between">
+        <Text className="text-xl text-[#37375A] font-bold">
+          發票在載具裡嗎？
+        </Text>
+        <Button colorScheme="blue">綁定載具</Button>
       </Flex>
-      <ClearIcon
-        color="#FFF"
-        className="absolute right-[10%] top-[20%] text-white"
-        onClick={() => {
-          router.push({ pathname: "/" });
-        }}
-      />
       {/* <Award /> */}
-    </VStack>
+      <Button colorScheme="blue">綁定載具</Button>
+    </Flex>
   );
 };
 
