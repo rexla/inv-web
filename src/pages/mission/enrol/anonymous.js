@@ -44,10 +44,10 @@ const anonymous = () => {
         <Text className="text-xl text-[#37375A] font-bold">
           發票在載具裡嗎？
         </Text>
-        <Button colorScheme="blue">綁定載具</Button>
+        <Button>綁定載具</Button>
       </Flex>
       {/* <Award /> */}
-      <Button colorScheme="blue">綁定載具</Button>
+      <Button>綁定載具</Button>
     </Flex>
   );
 };

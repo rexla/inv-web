@@ -1,8 +1,8 @@
 import React from "react";
 import { useRouter } from "next/router";
-import { Box, Text, Flex, Button, Switch } from "@chakra-ui/react";
+import { Text, Flex, Button } from "@chakra-ui/react";
 
-const Missions = ({ mission }) => {
+const Missions = ({ theme }) => {
   const router = useRouter();
   return (
     <Flex className="h-[232px] ml-8 mr-4 my-4 bg-[#CBD5E0] rounded-2xl flex-col drop-shadow-md">
@@ -17,10 +17,10 @@ const Missions = ({ mission }) => {
           </Text>
         </Flex>
         <Button
-          colorScheme="blue"
+          colorScheme="primary"
           marginRight={"20px"}
           onClick={() => {
-            router.replace("/mission/enrol/anonymous");
+            router.push({ pathname: "/mission/enrol/anonymous" });
           }}
         >
           登錄

@@ -6,7 +6,7 @@ const Burger = () => {
     console.log("hello");
   };
   return (
-    <div className="mx-auto mt-2 text-center">
+    <div className="mx-auto text-center mt-10">
       <CircularProgress value={80} />
       <Text color="#3182CE">/ABC+123</Text>
       <Text color="#3182CE" fontSize="xs">
@@ -16,13 +16,14 @@ const Burger = () => {
         同步
       </Button>
       <div className="flex flex-col border-y-[1px]">
-        <Box
+        {/* <Box
           as="button"
-          className="mx-auto my-[16px] font-bold"
+          className="mx-auto my-[16px] font-bold w-full"
           onClick={connect}
         >
           符合發票
-        </Box>
+        </Box> */}
+        <Button>符合發票</Button>
         <div className="border-y-[1px]">
           <Box
             as="button"
