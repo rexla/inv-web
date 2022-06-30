@@ -15,7 +15,7 @@ const TitleX = ({ text, color }) => {
     >
       {text}
       <ArrowBackIcon
-        className={`${textColor} fixed left-8`}
+        className={`${textColor} absolute left-8`}
         // onClick={() => {
         //   router.push({ pathname: "/" });
         // }}

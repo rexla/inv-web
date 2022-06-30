@@ -1,35 +1,44 @@
 import React from "react";
+import { useForm } from "react-hook-form";
 import { Box, Text, Flex, Input, Checkbox } from "@chakra-ui/react";
-import { Direction } from "@mui/material";
 
 const Award = () => {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => console.log(data);
   return (
     <Flex bg="#E2E8F0" w="full" className="flex-col px-[24px] py-[16px]">
       <Text className="text-3xl font-bold">領獎資料</Text>
-      <Box py="16px">
-        <Text color="#2D3748" className="font-medium text-xs py-[4px]">
-          姓名
-        </Text>
-        <Input placeholder="請輸入真實姓名" bg="white" />
-      </Box>
-      <Box py="16px">
-        <Text color="#2D3748" className="font-medium text-xs py-[4px]">
-          手機
-        </Text>
-        <Input placeholder="請輸入聯絡手機號碼" bg="white" />
-      </Box>
-      <Box py="16px">
-        <Text color="#2D3748" className="font-medium text-xs py-[4px]">
-          信箱
-        </Text>
-        <Input placeholder="請輸入E-mail" bg="white" />
-      </Box>
-      <Box py="16px">
-        <Text color="#2D3748" className="font-medium text-xs py-[4px]">
-          居住縣市
-        </Text>
-        <Input placeholder="請輸入獎項寄送地址" bg="white" />
-      </Box>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <p>姓名</p>
+        <input
+          defaultValue="請輸入真實姓名"
+          {...register("name", { required: true })}
+        />
+        <p>手機</p>
+        <input
+          defaultValue="請輸入聯絡手機號碼"
+          {...register("phone", { required: true })}
+        />
+        <p>信箱</p>
+        <input
+          defaultValue="請輸入E-mail"
+          {...register("email", { required: true })}
+        />
+        <p>居住縣市</p>
+        <input
+          defaultValue="請輸入獎項寄送地址"
+          {...register("address", { required: true })}
+        />
+
+        {errors.name && <span>This field is required</span>}
+
+        <input type="submit" />
+      </form>
       <Flex>
         <Checkbox bg="white" h="full"></Checkbox>
         <Text color="#718096" ml="2">

@@ -1,9 +1,8 @@
 import React from "react";
-import { useRouter } from "next/router";
 import { Text, Flex, Button } from "@chakra-ui/react";
+import Link from "next/link";
 
-const Missions = ({ theme }) => {
-  const router = useRouter();
+const Missions = () => {
   return (
     <Flex className="h-[232px] ml-8 mr-4 my-4 bg-[#CBD5E0] rounded-2xl flex-col drop-shadow-md">
       <Flex className="h-[144px] bg-[#CBD5E0] rounded-t-2xl"></Flex>
@@ -16,15 +15,13 @@ const Missions = ({ theme }) => {
             登錄抽SYM VEGA125 CBS2.0機車
           </Text>
         </Flex>
-        <Button
-          colorScheme="primary"
-          marginRight={"20px"}
-          onClick={() => {
-            router.push({ pathname: "/mission/enrol/anonymous" });
-          }}
-        >
-          登錄
-        </Button>
+        <Link href="/mission/enrol/anonymous">
+          <span className="bg-[#2b6cb0] rounded-md mr-[20px]">
+            <button className="w-[64px] h-[40px] text-white font-bold ">
+              登錄
+            </button>
+          </span>
+        </Link>
       </Flex>
     </Flex>
   );

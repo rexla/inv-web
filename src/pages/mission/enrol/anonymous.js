@@ -46,8 +46,7 @@ const anonymous = () => {
         </Text>
         <Button>綁定載具</Button>
       </Flex>
-      {/* <Award /> */}
-      <Button>綁定載具</Button>
+      <Award />
     </Flex>
   );
 };

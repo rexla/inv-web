@@ -15,15 +15,15 @@ const DrawerExample = () => {
 
   return (
     <>
-      <Button
-        ref={btnRef}
-        colorScheme="primary"
-        onClick={onOpen}
-        fontSize="24px"
-        className="rounded-md h-[40px] w-[40px] text-[white]"
-      >
-        +
-      </Button>
+      <span className="rounded-md bg-[#2b6cb0]">
+        <button
+          ref={btnRef}
+          onClick={onOpen}
+          className="h-[40px] w-[40px] text-2xl text-white"
+        >
+          +
+        </button>
+      </span>
       <Drawer
         isOpen={isOpen}
         placement="right"

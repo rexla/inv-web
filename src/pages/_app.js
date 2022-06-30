@@ -1,14 +1,14 @@
 import "../../styles/globals.css";
-import { ChakraProvider, Box } from "@chakra-ui/react";
+import { ChakraProvider, Container } from "@chakra-ui/react";
 import theme from "../global/theme";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Box maxW={"30em"}>
-      <ChakraProvider theme={theme}>
+    <ChakraProvider theme={theme}>
+      <Container maxW="30em" p="0">
         <Component {...pageProps} />
-      </ChakraProvider>
-    </Box>
+      </Container>
+    </ChakraProvider>
   );
 }
 
