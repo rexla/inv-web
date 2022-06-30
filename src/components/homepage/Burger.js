@@ -1,10 +1,7 @@
 import React from "react";
-import { CircularProgress, Text, Button, Box } from "@chakra-ui/react";
+import { CircularProgress, Text, Button } from "@chakra-ui/react";
 
 const Burger = () => {
-  const connect = () => {
-    console.log("hello");
-  };
   return (
     <div className="mx-auto text-center mt-10">
       <CircularProgress value={80} />
@@ -16,30 +13,17 @@ const Burger = () => {
         同步
       </Button>
       <div className="flex flex-col border-y-[1px]">
-        {/* <Box
-          as="button"
-          className="mx-auto my-[16px] font-bold w-full"
-          onClick={connect}
-        >
+        <Button colorScheme={"white"} color="black" my="8px">
           符合發票
-        </Box> */}
-        <Button>符合發票</Button>
-        <div className="border-y-[1px]">
-          <Box
-            as="button"
-            className="mx-auto my-[16px] font-bold"
-            onClick={connect}
-          >
-            領獎資料
-          </Box>
-        </div>
-        <Box
-          as="button"
-          className="mx-auto my-[16px] font-bold"
-          onClick={connect}
-        >
+        </Button>
+        <hr />
+        <Button colorScheme={"white"} color="black" my="8px">
+          領獎資料
+        </Button>
+        <hr />
+        <Button colorScheme={"white"} color="black" my="8px">
           登出
-        </Box>
+        </Button>
       </div>
     </div>
   );
