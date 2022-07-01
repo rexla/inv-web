@@ -1,4 +1,14 @@
-html,
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .bp {
+    @apply bg-[#2b6cb0];
+  }
+}
+
+/* html,
 body {
   padding: 0;
   margin: 0;
@@ -24,11 +34,7 @@ a:hover {
 img {
   max-width: 100%;
   display: block;
-}
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+} */
 
 /* button,
 [type="button"] {

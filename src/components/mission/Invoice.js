@@ -46,7 +46,7 @@ const Invoice = () => {
         <InputGroup>
           <Input
             type="submit"
-            className="bg-[#2B6CB0] text-white font-bold mt-[20px]"
+            className="bp text-white font-bold mt-[20px]"
             value="送出"
           />
           <InputRightElement>

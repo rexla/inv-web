@@ -18,11 +18,13 @@ const Missions = () => {
             登錄抽SYM VEGA125 CBS2.0機車
           </Text>
         </Flex>
-        <Link href="/mission/enrol/anonymous">
-          {/* <Button colorScheme={"primary"}>登錄</Button> */}
-          <button className="w-[64px] h-[40px] text-white font-bold bg-[#2b6cb0] rounded-md mr-[10px] ">
+        <Link href="/mission/enrol/anonymous" passHref>
+          <Button colorScheme={"primary"} className="bp">
             登錄
-          </button>
+          </Button>
+          {/* <button className="w-[64px] h-[40px] text-white font-bold bg-[#2b6cb0] rounded-md mr-[10px] ">
+            登錄
+          </button> */}
         </Link>
       </Flex>
     </Flex>
