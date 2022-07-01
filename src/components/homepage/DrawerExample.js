@@ -6,8 +6,10 @@ import {
   DrawerContent,
   useDisclosure,
   Button,
+  Flex,
 } from "@chakra-ui/react";
 import Burger from "./Burger";
+import ButtonStatus from "../ButtonStatus";
 
 const DrawerExample = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -15,7 +17,8 @@ const DrawerExample = () => {
 
   return (
     <>
-      <span className="rounded-md bg-[#2b6cb0]">
+      {/* <ButtonStatus /> */}
+      {/* <div className="rounded-md bg-[#2b6cb0]">
         <button
           ref={btnRef}
           onClick={onOpen}
@@ -23,7 +26,7 @@ const DrawerExample = () => {
         >
           +
         </button>
-      </span>
+      </div> */}
       <Drawer
         isOpen={isOpen}
         placement="right"

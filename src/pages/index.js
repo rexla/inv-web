@@ -4,6 +4,7 @@ import profilePic from "../../public/images/profile.png";
 import { Box, Text, Flex } from "@chakra-ui/react";
 import Missions from "../components/homepage/Missions";
 import DrawerExample from "../components/homepage/DrawerExample";
+import ButtonStatus from "../components/ButtonStatus";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
             >
               +
             </Box>
+            <ButtonStatus />
             <DrawerExample />
           </Flex>
         </Flex>
