@@ -8,7 +8,7 @@ const TitleX = ({ text }) => {
     <Flex className="w-full py-[20px] bg-[#2B6CB0] items-center text-xl text-white font-bold">
       <Flex ml="40%">{text}</Flex>
       <Link href="/">
-        <ClearIcon className="text-white ml-24 cursor-pointer" />
+        <ClearIcon className="text-white ml-[25%] cursor-pointer" />
       </Link>
     </Flex>
   );

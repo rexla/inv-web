@@ -19,11 +19,10 @@ const Missions = () => {
           </Text>
         </Flex>
         <Link href="/mission/enrol/anonymous">
-          <span className="bg-[#2b6cb0] rounded-md mr-[10px]">
-            <button className="w-[64px] h-[40px] text-white font-bold ">
-              登錄
-            </button>
-          </span>
+          {/* <Button colorScheme={"primary"}>登錄</Button> */}
+          <button className="w-[64px] h-[40px] text-white font-bold bg-[#2b6cb0] rounded-md mr-[10px] ">
+            登錄
+          </button>
         </Link>
       </Flex>
     </Flex>
