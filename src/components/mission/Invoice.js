@@ -43,15 +43,11 @@ const Invoice = () => {
           無QR code之傳統發票，無法參加登錄活動。
         </p>
         {errors.name && <span>This field is required</span>}
-        <InputGroup>
-          <Input
-            type="submit"
-            className="bp text-white font-bold mt-[20px]"
-            value="送出"
-          />
+        <InputGroup className="bp mt-[20px] rounded-lg">
+          <Input type="submit" className="text-white font-bold" value="送出" />
           <InputRightElement>
             <ArrowForwardIcon
-              className="mt-[40px] mr-[200px]"
+              className="mr-[200px]"
               style={{ color: "white" }}
             />
           </InputRightElement>
